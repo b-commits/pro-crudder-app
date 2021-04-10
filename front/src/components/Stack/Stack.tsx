@@ -1,9 +1,5 @@
 const Stack: React.FC = () => {
-    return (
-        <div>
-            Stack page
-        </div>
-    );
-}
+  return <div>Stack Page</div>;
+};
 
 export default Stack;

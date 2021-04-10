@@ -1,26 +1,28 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import About from '../About/About';
-import Stack from '../Stack/Stack';
+/** @jsxImportSource @emotion/react */
+import { Link } from 'react-router-dom';
+import { navList, link } from './Header-style';
 
 const Header: React.FC = () => {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/stack">Stack</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </Router>
+    <nav>
+      <ul css={navList}>
+        <li>
+          <Link css={link} to="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link css={link} to="/about">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link css={link} to="/stack">
+            Stack
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

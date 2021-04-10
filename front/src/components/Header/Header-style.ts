@@ -1,11 +1,11 @@
-import {css} from '@emotion/react';
+import { css } from '@emotion/react';
 
-export const headerContainer = css({
-    marginBottom: '100px',
+export const navList = css({
+    listStyleType: 'none'
 });
 
-export const headerMenu = css({
-    marginTop: '20px',
+export const link = css({
+    textDecoration: 'none',
 });
 
 const buttonBase = {
