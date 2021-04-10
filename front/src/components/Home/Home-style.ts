@@ -1,5 +1,11 @@
 import { css } from '@emotion/react';
 
-export const aboutBackground = css({
+export const homeBackground = css({
     backgroundColor: 'red'
 })
+
+
+
+
+
+

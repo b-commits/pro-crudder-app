@@ -14,8 +14,9 @@ export const crudLogo = css({
 })
 
 export const navMain = css({
-    marginTop: '80px',
+    marginTop: '60px',
     backgroundColor: navPrimaryColor,
+    borderBottom: '1px solid gray'
 })
 
 

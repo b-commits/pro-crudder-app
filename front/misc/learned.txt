@@ -1,3 +1,7 @@
- <NavLink>
+*<NavLink> - A special version of the <Link> that will add styling attributes to the rendered element when it matches
+the current URL.
 
-A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL.
+*Emotion pozwala po prostu na pisanie CSS jako obiektów JavaScriptowych. Nie działa z NavLinkiem, którego trzeba stylować
+po prostu plikiem .css.
+
+
