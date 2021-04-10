@@ -7,7 +7,7 @@ import './Headers.css';
 
 const Header: React.FC = () => {
   return (
-    <Typography variant="h6" color="primary">
+    <Typography variant="h5" color="primary">
       <nav css={navMain}>
         <ul css={navList}>
           <li>
