@@ -1,5 +1,7 @@
+import { Container } from '@material-ui/core';
+
 const Stack: React.FC = () => {
-  return <div>Stack Page</div>;
+  return <Container>Stack Page</Container>;
 };
 
 export default Stack;

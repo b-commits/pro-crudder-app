@@ -1,28 +1,51 @@
 /** @jsxImportSource @emotion/react */
-import { Link } from 'react-router-dom';
-import { navList, link } from './Header-style';
+import { NavLink } from 'react-router-dom';
+import { navList, navMain, crudLogo } from './Header-style';
+import { Typography } from '@material-ui/core';
+import logo from '../../resources/logo.png';
+import './Headers.css';
 
 const Header: React.FC = () => {
   return (
-    <nav>
-      <ul css={navList}>
-        <li>
-          <Link css={link} to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link css={link} to="/about">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link css={link} to="/stack">
-            Stack
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <Typography variant="h6" color="primary">
+      <nav css={navMain}>
+        <ul css={navList}>
+          <li>
+            <NavLink className="navLink" to="/">
+              <img src={logo} css={crudLogo} alt="" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="navLink"
+              activeClassName="activeNavLink"
+              exact
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="navLink"
+              activeClassName="activeNavLink"
+              to="/about"
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="navLink"
+              activeClassName="activeNavLink"
+              to="/stack"
+            >
+              Stack
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </Typography>
   );
 };
 

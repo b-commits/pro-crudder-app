@@ -1,20 +1,25 @@
 import { css } from '@emotion/react';
 
+const navPrimaryColor = '#292929';
+
 export const navList = css({
-    listStyleType: 'none'
+    listStyleType: 'none',
+    display: 'flex',
+    justifyContent: 'space-around',
 });
 
-export const link = css({
-    textDecoration: 'none',
-});
+export const crudLogo = css({
+    height: '80px',
+    marginTop: '-40px',
+})
 
-const buttonBase = {
-    cursor: 'pointer',
-};
+export const navMain = css({
+    marginTop: '80px',
+    backgroundColor: navPrimaryColor,
+})
 
-export const headerButtonSelected = css({
-    ...buttonBase,
-    textDecoration: 'underline',
-});
 
-export const headerButton = css(buttonBase);
+
+
+
+

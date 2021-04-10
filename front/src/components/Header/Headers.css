@@ -1,0 +1,11 @@
+/* This is needed because Emotion won't work with Router's NavLinks */
+
+.navLink {
+  text-decoration: none;
+  color: white;
+}
+
+.activeNavLink {
+  text-decoration: none;
+  color: #bb86fc;
+}

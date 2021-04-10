@@ -1,9 +1,8 @@
+/** @jsxImportSource @emotion/react */
+import { Container } from '@material-ui/core';
+
 const About: React.FC = () => {
-    return (
-      <header>
-          About Page
-      </header>
-    );
-}
+  return <Container css="aboutBackground">About Page</Container>;
+};
 
 export default About;
