@@ -21,10 +21,20 @@ function UserForm() {
       {({ values }) => (
         <Form css={formText}>
           <ThemeProvider theme={userTheme}>
-            <Field id="firstName" name="firstName" as={TextField} />
+            <Field
+              id="firstName"
+              name="firstName"
+              as={TextField}
+              label="First name"
+            />
             <br></br>
             <br></br>
-            <Field id="lastName" name="lastName" as={TextField} />
+            <Field
+              id="lastName"
+              name="lastName"
+              as={TextField}
+              label="Last name"
+            />
             <p>{JSON.stringify(values)}</p>
           </ThemeProvider>
         </Form>

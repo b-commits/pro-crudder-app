@@ -37,7 +37,6 @@ export const theme = createMuiTheme({
   props: {
     MuiTextField: {
       variant: 'outlined',
-      label: 'First Name',
       InputLabelProps: {
         style: { color: 'white' },
       },

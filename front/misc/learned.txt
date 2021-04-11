@@ -8,6 +8,8 @@ po prostu plikiem .css.
 Metoda createMuiTheme() pozwala nadpisywać dowolne właściwości domyślnego theme Material-UI.
 https://material-ui.com/customization/default-theme/
 
+*
+
 
 
 
