@@ -21,10 +21,9 @@ export const navMain = css({
     marginLeft: '10%',
     backgroundColor: navPrimaryColor,
     border: '1px solid gray',
+    fontSize: 'x-large',
+    fontFamily: 'Roboto'
 })
-
-
-
 
 
 
