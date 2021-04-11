@@ -53,9 +53,11 @@ function uploadFile(file: File, onProgress: (percentage: number) => void) {
         onProgress(Math.round(percentage));
       }
     };
+
     const formData = new FormData();
     formData.append('file', file);
     formData.append('upload_preset', key);
+
     xhr.send(formData);
   });
 }

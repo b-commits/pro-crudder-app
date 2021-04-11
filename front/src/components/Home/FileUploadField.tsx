@@ -1,7 +1,9 @@
+import { useField } from 'formik';
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { FileError, FileRejection, useDropzone } from 'react-dropzone';
-import { SingleFileUploadWithProgress } from './SingleFileUploadWithProgress';
+import { SingleFileUploadWithProgress } from '../Home/SingleFileUploadWithProgress';
 
 export interface UploadableFile {
   file: File;
@@ -9,13 +11,18 @@ export interface UploadableFile {
   url?: string;
 }
 
-export function FileUploadField() {
+export function FileUploadField({ name }: { name: string }) {
+  const [inputProps, metaProps, helpers] = useField(name);
   const [files, setFiles] = useState<UploadableFile[]>([]);
 
   const onDrop = useCallback((accFiles: File[], rejFiles: FileRejection[]) => {
     const mappedAcc = accFiles.map((file) => ({ file, errors: [] }));
     setFiles((curr) => [...curr, ...mappedAcc, ...rejFiles]);
   }, []);
+
+  useEffect(() => {
+    helpers.setValue(files);
+  }, [files]);
 
   function onDelete(file: File) {
     setFiles((curr) => curr.filter((fw) => fw.file !== file));
@@ -40,9 +47,6 @@ export function FileUploadField() {
         <input {...getInputProps()} />
         <p>Drop your image here.</p>
       </div>
-
-      {JSON.stringify(files)}
-
       {files.map((fileWrapper, idx) => (
         <SingleFileUploadWithProgress
           onDelete={onDelete}

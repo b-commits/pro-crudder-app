@@ -4,6 +4,7 @@ import { TextField } from '@material-ui/core';
 import { formText } from './Home-style';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { theme as userTheme } from '../../util/Theme';
+import { FileUploadField } from './FileUploadField';
 
 interface Values {
   firstName: string;
@@ -13,7 +14,7 @@ interface Values {
 function UserForm() {
   return (
     <Formik
-      initialValues={{ firstName: '', lastName: '' }}
+      initialValues={{ firstName: '', lastName: '', files: [] }}
       onSubmit={(values: Values) => {
         console.log(values);
       }}
@@ -35,6 +36,7 @@ function UserForm() {
               as={TextField}
               label="Last name"
             />
+            <FileUploadField name="files" />
             <p>{JSON.stringify(values)}</p>
           </ThemeProvider>
         </Form>
