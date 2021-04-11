@@ -1,4 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import { Grid, Button } from '@material-ui/core';
+import { trashText } from './FileUpload-style';
+
+import DeleteIcon from '@material-ui/icons/Delete';
 
 export interface FileHeaderProps {
   file: File;
@@ -8,10 +12,10 @@ export interface FileHeaderProps {
 export function FileHeader({ file, onDelete }: FileHeaderProps) {
   return (
     <Grid container>
-      <Grid item>{file.name}</Grid>
       <Grid item>
         <Button size="small" onClick={() => onDelete(file)}>
-          Delete
+          <DeleteIcon color="primary" />
+          <p css={trashText}>{file.name}</p>
         </Button>
       </Grid>
     </Grid>

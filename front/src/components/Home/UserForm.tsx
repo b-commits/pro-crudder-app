@@ -28,15 +28,12 @@ function UserForm() {
               as={TextField}
               label="First name"
             />
-            <br></br>
-            <br></br>
             <Field
               id="lastName"
               name="lastName"
               as={TextField}
               label="Last name"
             />
-            <p></p>
             <FileUploadField name="files" />
             <p>{JSON.stringify(values)}</p>
           </ThemeProvider>

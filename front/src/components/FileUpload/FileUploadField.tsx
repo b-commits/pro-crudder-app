@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useField } from 'formik';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { FileError, FileRejection, useDropzone } from 'react-dropzone';
 import { fileUploadWrapper, iconStyle, uploadText } from './FileUpload-style';
 import { SingleFileUploadWithProgress } from './SingleFileUploadWithProgress';
