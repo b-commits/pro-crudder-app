@@ -4,4 +4,10 @@ the current URL.
 *Emotion pozwala po prostu na pisanie CSS jako obiektów JavaScriptowych. Nie działa z NavLinkiem, którego trzeba stylować
 po prostu plikiem .css.
 
+*W celu personalizacji komponentów z biblioteki Material-UI można albo używać własnego pliku CSS (className="") albo korzystać z tzw. ThemeProvidera.
+Metoda createMuiTheme() pozwala nadpisywać dowolne właściwości domyślnego theme Material-UI.
+https://material-ui.com/customization/default-theme/
+
+
+
 
