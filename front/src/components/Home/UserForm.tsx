@@ -4,7 +4,7 @@ import { TextField } from '@material-ui/core';
 import { formText } from './Home-style';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { theme as userTheme } from '../../util/Theme';
-import { FileUploadField } from './FileUploadField';
+import { FileUploadField } from '../FileUpload/FileUploadField';
 
 interface Values {
   firstName: string;

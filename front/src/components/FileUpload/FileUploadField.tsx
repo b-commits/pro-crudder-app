@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { FileError, FileRejection, useDropzone } from 'react-dropzone';
-import { SingleFileUploadWithProgress } from '../Home/SingleFileUploadWithProgress';
+import { SingleFileUploadWithProgress } from './SingleFileUploadWithProgress';
 
 export interface UploadableFile {
   file: File;
