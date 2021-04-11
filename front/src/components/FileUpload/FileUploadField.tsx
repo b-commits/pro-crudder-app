@@ -1,9 +1,12 @@
+/** @jsxImportSource @emotion/react */
 import { useField } from 'formik';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { FileError, FileRejection, useDropzone } from 'react-dropzone';
+import { fileUploadWrapper, iconStyle, uploadText } from './FileUpload-style';
 import { SingleFileUploadWithProgress } from './SingleFileUploadWithProgress';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 export interface UploadableFile {
   file: File;
@@ -42,10 +45,11 @@ export function FileUploadField({ name }: { name: string }) {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
-    <React.Fragment>
+    <div css={fileUploadWrapper}>
       <div {...getRootProps()}>
         <input {...getInputProps()} />
-        <p>Drop your image here.</p>
+        <CloudUploadIcon css={iconStyle} fontSize="large" />
+        <p css={uploadText}>Drag your image here</p>
       </div>
       {files.map((fileWrapper, idx) => (
         <SingleFileUploadWithProgress
@@ -55,6 +59,6 @@ export function FileUploadField({ name }: { name: string }) {
           file={fileWrapper.file}
         />
       ))}
-    </React.Fragment>
+    </div>
   );
 }

@@ -25,7 +25,7 @@ export const theme = createMuiTheme({
         '& .MuiOutlinedInput-root': {
           '& fieldset': {
             border: '2px solid',
-            borderColor: purpleMain,
+            borderColor: 'white',
           },
         },
         '& label.Mui-focused': {

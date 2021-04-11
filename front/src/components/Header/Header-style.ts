@@ -24,15 +24,4 @@ export const navMain = css({
     fontSize: 'x-large',
     fontFamily: 'Roboto'
 })
-
-// export const navLink = css ({
-//     textDecoration: 'none',
-//     color: 'white',
-// })
-
-// export const activeNavLink = css ({
-//     textDecoration: 'none',
-//     color: '#bb86fc',
-//   }
-// )
   
